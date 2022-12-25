@@ -535,5 +535,44 @@ body{
     font-size: 20px;
     padding-left: 7px;
 }
+#username-error{
+    color: red;
+    display: none;
+    font-size: 13px;
+    text-align: center;
+}
+
+#password-error{
+    color: red;
+    display: none;
+    font-size: 13px;
+    text-align: center;
+}
+
+#email-error{
+    color: red;
+    display: none;
+    font-size: 13px;
+    text-align: center;
+}
+#firstname-error{
+    color: red;
+    display: none;
+    font-size: 13px;
+    text-align: center;
+}
+#lastname-error{
+    color: red;
+    display: none;
+    font-size: 13px;
+    text-align: center;
+}
+#confirm-error{
+    color: red;
+    display: none;
+    font-size: 13px;
+    text-align: center;
+}
+
 
 

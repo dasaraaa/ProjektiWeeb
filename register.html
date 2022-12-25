@@ -91,5 +91,45 @@
         </div>
       
   </div>
+  <script>
+    var username = document.getElementById("firstnamefield");
+      var firstnameError = document.getElementById("firstname-error");
+  
+  username.addEventListener('input', function (e){
+  
+      var userpattern = /^[A-Za-z][A-Za-z0-9_]{4,29}$/;
+      var currentValue = e.target.value;
+      var vlera = userpattern.test(currentValue);
+  
+      if(vlera){
+          firstnameError.style.display = 'none';
+      }else{
+          firstnameError.style.display  = 'block';
+      }
+      })
+  
+      var username = document.getElementById("lastnamefield");
+      var usernameError = document.getElementById("lastname-error");
+  
+  username.addEventListener('input', function (e){
+  
+      var userpattern = /^[A-Za-z][A-Za-z0-9_]{4,29}$/;
+      var currentValue = e.target.value;
+      var vlera = userpattern.test(currentValue);
+  
+      if(vlera){
+          usernameError.style.display = 'none';
+      }else{
+          usernameError.style.display  = 'block';
+      }
+      })
+  
+  // 
+  // 
+  
+  
+
+     
+
 </body>
 </html>
