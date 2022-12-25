@@ -148,8 +148,26 @@
             passwordError.style.display  = 'block';
         }
         })
+
+        //
+        var email = document.getElementById("emailfield");
+        var emailError = document.getElementById("email-error");
+    
+    password.addEventListener('input', function (e){
+    
+        var userpattern1 =/^[\w.+-]+@[\w.-]+.[a-zA-Z]{2,}$/;
+        var currentValue1 = e.target.value;
+        var vlera1 = userpattern1.test(currentValue1);
+    
+    
+        if(vlera1){
+            emailError.style.display = 'none';
+        }else{
+            emailError.style.display  = 'block';
+        }
+        })
   </script>
     
-</script>
+
 </body>
 </html>
