@@ -541,6 +541,13 @@ body{
     font-size: 13px;
     text-align: center;
 }
+#username-error1{
+    color: white;
+    display: none;
+    font-size: 13px;
+    text-align: center;
+}
+
 
 #password-error{
     color: red;

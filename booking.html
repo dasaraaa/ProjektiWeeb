@@ -42,17 +42,20 @@
         <form class="booking">
             <div id="f-div">
             <h3 id="booking-title">Book a Table</h3>
-            <input type="text" placeholder="Enter Name">
-            <input type="email" placeholder="Enter Email">
-            <select id="input-field">
+            <input type="text" placeholder="Enter Name" id="namefield">
+            <p id="username-error1">Please enter a valid name!</p>
+            <input type="email" placeholder="Enter Email" id="emailfield">
+            <p id="email-error">Please enter a valid email!</p>
+            <select id="input-field"> 
                <option value="person">Person</option>
-                <option value="2 person">2 Person</option>
-                <option value="3 person">3 Person</option>
-                <option value="4 person">4 Person</option>
-                <option value="5 person">5 Person</option>
+                <option value="2 person">2 People</option>
+                <option value="3 person">3 People</option>
+                <option value="4 person">4 People</option>
+                <option value="5 person">5 People</option>
             </select>
             <input type="date">
             <textarea placeholder="Message" id="tA"class="tAr"></textarea>
+            <p id="firstname-error">Please enter a message!</p>
             <button id="btn-booking">Book The Table</button>
             </div>
           </form>
@@ -85,5 +88,43 @@
         </div>
       
   </div>
+
+  <script>
+     var username = document.getElementById("namefield");
+        var usernameError1 = document.getElementById("username-error1");
+    
+    username.addEventListener('input', function (e){
+    
+        var userpattern = /^[A-Za-z][A-Za-z0-9_]{7,29}$/;
+        var currentValue = e.target.value;
+        var vlera = userpattern.test(currentValue);
+    
+        if(vlera){
+            usernameError1.style.display = 'none';
+        }else{
+            usernameError1.style.display  = 'block';
+        }
+        })
+    
+    // 
+
+    var email = document.getElementById("emailfield");
+        var emailError = document.getElementById("email-error");
+    
+    password.addEventListener('input', function (e){
+    
+        var userpattern1 =/^[\w.+-]+@[\w.-]+.[a-zA-Z]{2,}$/;
+        var currentValue1 = e.target.value;
+        var vlera1 = userpattern1.test(currentValue1);
+    
+    
+        if(vlera1){
+            emailError.style.display = 'none';
+        }else{
+            emailError.style.display  = 'block';
+        }
+        })
+
+  </script>
 </body>
 </html>

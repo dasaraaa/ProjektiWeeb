@@ -114,8 +114,8 @@
     // 
     // 
 
-    var username = document.getElementById("lastnamefield");
-        var usernameError = document.getElementById("lastname-error");
+    var lastname = document.getElementById("lastnamefield");
+        var lastnameError = document.getElementById("lastname-error");
     
     username.addEventListener('input', function (e){
     
@@ -124,9 +124,9 @@
         var vlera = userpattern.test(currentValue);
     
         if(vlera){
-            usernameError.style.display = 'none';
+            lastnameError.style.display = 'none';
         }else{
-            usernameError.style.display  = 'block';
+            lastnameError.style.display  = 'block';
         }
         })
     
