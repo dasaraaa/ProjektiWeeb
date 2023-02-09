@@ -1,3 +1,5 @@
+//SLIDER JAVA SCRIPT 
+
 const buttons = document.querySelectorAll("[data-carousel-button]")
 
 buttons.forEach(button => {
@@ -16,3 +18,14 @@ buttons.forEach(button => {
     delete activeSlide.dataset.active
   })
 })
+
+//RESPONSIVE NAVBAR
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+
+
