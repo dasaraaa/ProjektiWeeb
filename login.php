@@ -1,3 +1,49 @@
+<?php
+
+$server = "localhost";
+$username = "root";
+$password = '';
+$database = "ProjektiWeb";
+
+$data=mysqli_connect($server,$username,$password,$database);
+
+if($data===false){
+  die("connection error");
+}
+
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+  $username=$_POST["username"];
+  $password=$_POST["password"];
+
+  $sql="SELECT * FROM users WHERE username='".$username."' AND password='".$password."' ";
+
+  $result=mysqli_query($data,$sql);
+
+  $row = mysqli_fetch_array($result);
+
+
+  if($row["usertype"]=="user"){
+
+    $_SESSION["username"]=$username;
+    header("location:home.php");
+
+  }
+
+  elseif($row["usertype"]=="admin"){
+
+    $_SESSION["username"]=$username;
+    header("location:dashboard.php");
+    
+  }
+
+}
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,20 +79,20 @@
                 <div id="heading">
                    <div class="navbar-links">
                 <ul>
-                    <li>
-                        <a href="./home.html">Home</a>
+                <li>
+                        <a href="./home.php">Home</a>
                     </li>
                     <li>
-                        <a href="./aboutUs.html">About Us</a>
+                        <a href="./aboutUs.php">About Us</a>
                     </li>
                     <li>
-                        <a href="./menu.html">Menu</a>
+                        <a href="./menu.php">Menu</a>
                     </li>
                     <li>
-                        <a href="./booking.html">Booking</a>
+                        <a href="./booking.php">Booking</a>
                     </li>
                     <li>
-                        <a href="./login.html">Log In</a>
+                        <a href="./login.php">Log In</a>
                     </li>
                    
                 </ul>
@@ -54,15 +100,17 @@
              </div>
         </nav>
         <div class="formulari">
+            <form action="" method="post">
             <h2>Login Here</h2>
-            <input type="text"  placeholder="Enter Username" class="inputs" id="namefield">
+            <input type="text" name="username" placeholder="Enter Username" class="inputs" id="namefield">
             <p id="username-error">Please enter a valid Username!</p>
-            <input type="password"  placeholder="Enter Password" class="inputs" id="passwordfield">
+            <input type="password" name="password"  placeholder="Enter Password" class="inputs" id="passwordfield">
             <p id="password-error">Please enter a valid Password!</p>
             <button class="btn" ><a href="./home.html" id="loginbtn">Log In</a></button>
             <p class="link">Don't have an account?</p>
-            <a href="./register.html" id="a-2">Register</a>
+            <a href="./register.php" id="a-2">Register</a>
             </a> </p>
+            </form>
         </div>
 
 

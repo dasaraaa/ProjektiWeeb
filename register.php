@@ -14,6 +14,12 @@
   </head>
   <body>
     <div id="sectionL">
+
+    <?php
+            include 'Model.php';
+            $model = new Model();
+            $insert = $model->insert();
+            ?>
         
         <nav class="navbar">
             <div id="header">
@@ -30,32 +36,33 @@
                 <div id="heading">
                    <div class="navbar-links">
                 <ul>
-                    <li>
-                        <a href="./home.html">Home</a>
+                <li>
+                        <a href="./home.php">Home</a>
                     </li>
                     <li>
-                        <a href="./aboutUs.html">About Us</a>
+                        <a href="./aboutUs.php">About Us</a>
                     </li>
                     <li>
-                        <a href="./menu.html">Menu</a>
+                        <a href="./menu.php">Menu</a>
                     </li>
                     <li>
-                        <a href="./booking.html">Booking</a>
+                        <a href="./booking.php">Booking</a>
                     </li>
                     <li>
-                        <a href="./login.html">Log In</a>
+                        <a href="./login.php">Log In</a>
                     </li>
-                   
                 </ul>
                 </div>
                 </div>
             </nav>
 
           <div class="formulariR">
+          <form action="" method="post">
             <h2>Register Here</h2>
             <input
               type="text"
               placeholder="Enter Username"
+              name="name"
               id="firstnamefield"
             />
             <p id="firstname-error">Please enter a valid first name!</p>
@@ -65,19 +72,21 @@
               id="lastnamefield"
             />
             <p id="lastname-error">Please enter a valid last name!</p>
-            <input type="email" placeholder=" Enter Email" id="emailfield" />
+            <input name="email" type="email" placeholder=" Enter Email" id="emailfield" />
             <p id="email-error">Please enter a valid email!</p>
             <input
               type="password"
+              name="password"
               placeholder="Enter Password"
               id="passwordfield"
             />
             <p id="password-error">Please enter a valid password!</p>
-            <button class="btn-2"><a href="./home.html">Register</a></button>
+            <input name="submit" type="submit" class="btn-2" value="Register"/>
             <p>Already have an account?</p>
-            <a href="./login.html" id="a-1">Log In</a>
+            <a href="./login.php" id="a-1">Log In</a>
           </div>
         </div>
+        </form>
       </div>
 
     <div id="footer">

@@ -39,21 +39,21 @@
             <div id="heading">
                <div class="navbar-links">
             <ul>
-                <li>
-                    <a href="./home.html">Home</a>
-                </li>
-                <li>
-                    <a href="./aboutUs.html">About Us</a>
-                </li>
-                <li>
-                    <a href="./menu.html">Menu</a>
-                </li>
-                <li>
-                    <a href="./booking.html">Booking</a>
-                </li>
-                <li>
-                    <a href="./login.html">Log In</a>
-                </li>
+            <li>
+                        <a href="./home.php">Home</a>
+                    </li>
+                    <li>
+                        <a href="./aboutUs.php">About Us</a>
+                    </li>
+                    <li>
+                        <a href="./menu.php">Menu</a>
+                    </li>
+                    <li>
+                        <a href="./booking.php">Booking</a>
+                    </li>
+                    <li>
+                        <a href="./login.php">Log In</a>
+                    </li>
                
             </ul>
             </div>
@@ -86,7 +86,7 @@
          <div class="box" >
             <img src="./images/mixdish.png" class="imgSS">
             <h1>Avocado Chicken</h1>
-            <p>Shicken breasts, lime, de, tomato, red onion</p>
+            <p>Chicken breasts, lime, de, tomato, red onion</p>
          </div>
 
          <div class="box tablet-box">

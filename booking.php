@@ -28,20 +28,20 @@
                 <div id="heading">
                    <div class="navbar-links">
                 <ul>
-                    <li>
-                        <a href="./home.html">Home</a>
+                <li>
+                        <a href="./home.php">Home</a>
                     </li>
                     <li>
-                        <a href="./aboutUs.html">About Us</a>
+                        <a href="./aboutUs.php">About Us</a>
                     </li>
                     <li>
-                        <a href="./menu.html">Menu</a>
+                        <a href="./menu.php">Menu</a>
                     </li>
                     <li>
-                        <a href="./booking.html">Booking</a>
+                        <a href="./booking.php">Booking</a>
                     </li>
                     <li>
-                        <a href="./login.html">Log In</a>
+                        <a href="./login.php">Log In</a>
                     </li>
                    
                 </ul>
