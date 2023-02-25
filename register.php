@@ -60,17 +60,9 @@
           <form action="" method="post">
             <h2>Register Here</h2>
             <input
-              type="text"
-              placeholder="Enter Username"
-              name="name"
-              id="firstnamefield"
-            />
+              type="text" placeholder="Enter Username" name="name" id="firstnamefield"  />
             <p id="firstname-error">Please enter a valid first name!</p>
-            <input
-              type="text"
-              placeholder="Enter Lastname"
-              id="lastnamefield"
-            />
+            <input type="text" placeholder="Enter Lastname" id="lastnamefield" />
             <p id="lastname-error">Please enter a valid last name!</p>
             <input name="email" type="email" placeholder=" Enter Email" id="emailfield" />
             <p id="email-error">Please enter a valid email!</p>
@@ -141,6 +133,7 @@
 
       //
       //
+    
 
       var lastname = document.getElementById("lastnamefield");
       var lastnameError = document.getElementById("lastname-error");

@@ -78,12 +78,15 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                  </a>
                 <div id="heading">
                    <div class="navbar-links">
-                <ul>
+                   <ul>
                 <li>
                         <a href="./home.php">Home</a>
                     </li>
                     <li>
                         <a href="./aboutUs.php">About Us</a>
+                    </li>
+                    <li>
+                        <a href="./staff.php">Our Staff</a>
                     </li>
                     <li>
                         <a href="./menu.php">Menu</a>
@@ -100,13 +103,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
              </div>
         </nav>
         <div class="formulari">
-            <form action="" method="post">
+            <form action="thelogin.php" method="post">
             <h2>Login Here</h2>
             <input type="text" name="username" placeholder="Enter Username" class="inputs" id="namefield">
             <p id="username-error">Please enter a valid Username!</p>
             <input type="password" name="password"  placeholder="Enter Password" class="inputs" id="passwordfield">
             <p id="password-error">Please enter a valid Password!</p>
-            <button class="btn" ><a href="./home.html" id="loginbtn">Log In</a></button>
+            <button class="btn" ><a href="./home.php" id="loginbtn">Log In</a></button>
             <p class="link">Don't have an account?</p>
             <a href="./register.php" id="a-2">Register</a>
             </a> </p>

@@ -76,6 +76,19 @@ class Model
         return $data;
     }
 
+    public function stafffetch()
+    {
+        $data = null;
+        $query = "SELECT * FROM ourstaff";
+        if ($sql = $this->conn->query($query)) {
+            while ($row = mysqli_fetch_assoc($sql)) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+
+
 
     public function fetch()
     {

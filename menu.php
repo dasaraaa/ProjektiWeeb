@@ -37,12 +37,15 @@ $rows = $model->menufetch();
                  </a>
                 <div id="heading">
                    <div class="navbar-links">
-                <ul>
+                   <ul>
                 <li>
                         <a href="./home.php">Home</a>
                     </li>
                     <li>
                         <a href="./aboutUs.php">About Us</a>
+                    </li>
+                    <li>
+                        <a href="./staff.php">Our Staff</a>
                     </li>
                     <li>
                         <a href="./menu.php">Menu</a>
