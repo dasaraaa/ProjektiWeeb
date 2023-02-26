@@ -11,7 +11,13 @@
 
 </head>
 <body>
+
     <div id="sectionB">
+    <?php
+            include 'Model.php';
+            $model = new Model();
+            $booking = $model->booking();
+            ?>
         <nav class="navbar">
             <div id="header">
                 
@@ -53,24 +59,24 @@
                 </div>
             </nav>
         
-        <form class="booking">
+        <form class="booking" method="post">
             <div id="f-div">
             <h3 id="booking-title">Book a Table</h3>
-            <input type="text" placeholder="Enter Name" id="username">
-            <p id="username-error">Please enter a valid name!</p>
-            <input type="email" placeholder="Enter Email" id="email">
+            <input type="text" placeholder="Enter Name" id="namefield" name="name">
+            <p id="username-error1">Please enter a valid name!</p>
+            <input type="email" placeholder="Enter Email" id="emailfield" name="emailfield" >
             <p id="email-error">Please enter a valid email!</p>
-            <select id="input-field"> 
-               <option value="person">Person</option>
-                <option value="2 person">2 People</option>
-                <option value="3 person">3 People</option>
-                <option value="4 person">4 People</option>
-                <option value="5 person">5 People</option>
+            <select id="input-field" name="persons"> 
+                <option value="1 Person">Person</option>
+                <option value="2 Persons">2 People</option>
+                <option value="3 Persons">3 People</option>
+                <option value="4 Persons">4 People</option>
+                <option value="5 Persons">5 People</option>
             </select>
-            <input type="date">
-            <textarea placeholder="Message" id="tA"class="tAr"></textarea>
+            <input type="date" name="date">
+            <textarea placeholder="Message" id="tA"class="tAr" name="message"></textarea>
             <p id="firstname-error">Please enter a message!</p>
-            <button id="btn-booking">Book The Table</button>
+            <button id="btn-booking" name="submit">Book The Table</button>
             </div>
           </form>
           </div>
@@ -107,8 +113,8 @@
   </div>
 
   <script>
-    var username = document.getElementById("username");
-        var usernameError = document.getElementById("username-error");
+     var username = document.getElementById("namefield");
+        var usernameError1 = document.getElementById("username-error1");
     
     username.addEventListener('input', function (e){
     
@@ -117,31 +123,30 @@
         var vlera = userpattern.test(currentValue);
     
         if(vlera){
-            usernameError.style.display = 'none';
+            usernameError1.style.display = 'none';
         }else{
-            usernameError.style.display  = 'block';
+            usernameError1.style.display  = 'block';
         }
         })
     
     // 
 
-    var email = document.getElementById("email");
+    var email = document.getElementById("emailfield");
         var emailError = document.getElementById("email-error");
     
-    email.addEventListener('input', function (e){
+    password.addEventListener('input', function (e){
     
-        var userpattern2 = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-        var currentValue2 = e.target.value;
-        var vlera2 = userpattern2.test(currentValue2);
+        var userpattern1 =/^[\w.+-]+@[\w.-]+.[a-zA-Z]{2,}$/;
+        var currentValue1 = e.target.value;
+        var vlera1 = userpattern1.test(currentValue1);
     
     
-        if(vlera2){
+        if(vlera1){
             emailError.style.display = 'none';
         }else{
             emailError.style.display  = 'block';
         }
         })
-    
 
   </script>
 </body>

@@ -25,9 +25,9 @@ class Model
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-            echo $name ;
-            echo $email ;
-            echo $password ;
+            echo $name;
+            echo $email;
+            echo $password;
 
             $query = "INSERT INTO users (Username, Password, Email) VALUES ('$name','$password', '$email')";
             if ($sql = $this->conn->query($query)) {
@@ -39,6 +39,27 @@ class Model
             }
         }
     }
+
+    public function booking() {
+        if (isset($_POST['submit'])) {
+            $name = $_POST['name'];
+            $email = $_POST['emailfield'];
+            $persons = $_POST['persons'];
+            $date = $_POST['date'];
+            $message = $_POST['message'];
+
+      
+
+            $query = "INSERT INTO booking (name, email, persons, date, message) VALUES ('$name','$email', '$persons','$date','$message')";
+
+            if ($sql = $this->conn->query($query)) {
+                echo "<script>alert('booking added');</script>";
+            } else {
+                echo "<script>alert('failed');</script>";
+            }
+            
+    }
+}
 
     public function teamfetch()
     {
