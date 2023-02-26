@@ -65,7 +65,9 @@
   gap: 3rem;
   margin: 2% 5%;
 }
-        </style>
+
+
+</style>
 </head>
 <body>
 
@@ -119,7 +121,7 @@ $rows = $model->stafffetch();
 
         <div class="staff1"
         style="
-        margin-left:8%;
+        margin-left:15vw;
          margin-top: 3%;
          border-radius: 0px;
          margin-top: 30px;

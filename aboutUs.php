@@ -14,6 +14,30 @@
     <title>AboutUS</title>
     <link rel="shortcut icon" href="./My project.png" type="image/svg+xml">
     <script src="functionality.js" defer></script>
+    <style>
+        @media screen and (max-width: 525px){
+     .slide > img {
+       display: block;
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+       object-position: center;
+       padding-left: 5vw;
+       padding-right: 5vw;
+}     
+    .carousel-button > img {
+    height: 2vh;
+    
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+.carousel-button.prev {
+    left: 1rem;
+}
+        }
+    </style>
 </head>
 <body>
     <div id="section">

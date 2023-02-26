@@ -9,7 +9,7 @@ body {
   background-color: rgb(70, 70, 70);
 }
 #section-1 {
-  height: 80vh;
+  height: 100vh;
   background-image: url(steak.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,6 +45,9 @@ body {
   background-color: brown;
 }
 
+#bookbtn{
+  margin-left: 10%;
+}
 #logo img {
   width: 50px;
   height: 50px;
@@ -83,7 +86,7 @@ body {
   font-weight: 600;
   transition: 0.4s;
   border-radius: 5px;
-  
+  width: 200px;
 }
 #main-text a:hover {
   background-color: rgb(216, 180, 126);
@@ -127,7 +130,7 @@ body {
 
 .box {
   /* padding-left: 15px; */
-  background: rgba(165, 42, 42, 0.283);
+  background: rgba(194, 194, 194, 0.283);
   /* margin-left: 3%;
   margin-right: 3%;
   padding-top: 1%; */
@@ -695,11 +698,7 @@ body {
     margin: 5% 3%;
   }
 
-  .staff1 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin: 2% 5%;
-  }
+  
   #sectionB {
     background-size: 0 100%;
   }

@@ -20,6 +20,38 @@
     <script src="functionality.js" defer></script>
     <link rel="shortcut icon" href="./My project.png" type="image/svg+xml">
     <title>Home</title>
+    <style>
+     #main-text a {
+    text-decoration: none;
+    padding: 15px 5%;
+    font-size: 16px;
+    background-color: #a52a2a;
+    color: #d9d8d8;
+    font-weight: 600;
+    transition: 0.4s;
+    border-radius: 5px;
+    width: 15vw;
+}
+.box img {
+    width: 170px;
+    height: 190px;
+    padding-top: 20px;
+}
+@media screen and (max-width: 525px) {
+    #main-text a {
+    text-decoration: none;
+    padding: 15px 5%;
+    font-size: 16px;
+    background-color: #a52a2a;
+    color: #d9d8d8;
+    font-weight: 600;
+    transition: 0.4s;
+    border-radius: 5px;
+    width: 20vw;
+}
+
+}
+    </style>
 </head>
 <body>
     <div id="section-1">
@@ -69,7 +101,7 @@
 
 <p>Made with love.</p>
 
-<a href="./booking.php" >Book A Table</a>
+<a href="./booking.php" id= bookbtn>Book A Table</a>
 </div>
         </div>
         <!-- <div id="main-text">
