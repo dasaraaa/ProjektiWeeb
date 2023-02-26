@@ -9,7 +9,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Work+Sans&display=swap" rel="stylesheet">
-    <title>Blip | Dashboard</title>
+    <title> ORA | Dashboard</title>
  
     <style>
       :root{

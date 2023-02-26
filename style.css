@@ -9,11 +9,12 @@ body {
   background-color: rgb(70, 70, 70);
 }
 #section-1 {
-  height: 100vh;
+  height: 80vh;
   background-image: url(steak.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+ 
 }
 #header {
   width: 100%;
@@ -52,8 +53,11 @@ body {
 }
 
 #main-text {
+  padding-bottom: 0%;
+  margin-bottom: 0%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 #main-text h1 {
@@ -79,6 +83,7 @@ body {
   font-weight: 600;
   transition: 0.4s;
   border-radius: 5px;
+  
 }
 #main-text a:hover {
   background-color: rgb(216, 180, 126);
@@ -618,6 +623,7 @@ body {
 .wrapper p {
   font-size: 1rem;
 }
+
 @media all and (max-width: 610px) {
   .toggle-button {
     display: flex;
@@ -688,6 +694,12 @@ body {
     gap: 2rem;
     margin: 5% 3%;
   }
+
+  .staff1 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2% 5%;
+  }
   #sectionB {
     background-size: 0 100%;
   }
@@ -716,6 +728,12 @@ body {
     grid-template-columns: repeat(1, 1fr);
     gap: 5rem;
     margin: 5% 3%;
+  }
+
+  .staff1 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin: 2% 5%;
   }
   .formulari,
   .formulariR {

@@ -62,15 +62,24 @@
             </div>
             </div>
         </nav>
-        </div>
+
         <div id="main-text">
+
+<h1>Restaurant Ora</h1>
+
+<p>Made with love.</p>
+
+<a href="./booking.php" >Book A Table</a>
+</div>
+        </div>
+        <!-- <div id="main-text">
 
             <h1>Restaurant Ora</h1>
 
             <p>Made with love.</p>
 
             <a href="./booking.html">Book A Table</a>
-        </div>
+        </div> -->
 
     </div> 
 
