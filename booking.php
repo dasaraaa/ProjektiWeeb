@@ -56,9 +56,9 @@
         <form class="booking">
             <div id="f-div">
             <h3 id="booking-title">Book a Table</h3>
-            <input type="text" placeholder="Enter Name" id="namefield">
-            <p id="username-error1">Please enter a valid name!</p>
-            <input type="email" placeholder="Enter Email" id="emailfield">
+            <input type="text" placeholder="Enter Name" id="username">
+            <p id="username-error">Please enter a valid name!</p>
+            <input type="email" placeholder="Enter Email" id="email">
             <p id="email-error">Please enter a valid email!</p>
             <select id="input-field"> 
                <option value="person">Person</option>
@@ -107,8 +107,8 @@
   </div>
 
   <script>
-     var username = document.getElementById("namefield");
-        var usernameError1 = document.getElementById("username-error1");
+    var username = document.getElementById("username");
+        var usernameError = document.getElementById("username-error");
     
     username.addEventListener('input', function (e){
     
@@ -117,30 +117,31 @@
         var vlera = userpattern.test(currentValue);
     
         if(vlera){
-            usernameError1.style.display = 'none';
+            usernameError.style.display = 'none';
         }else{
-            usernameError1.style.display  = 'block';
+            usernameError.style.display  = 'block';
         }
         })
     
     // 
 
-    var email = document.getElementById("emailfield");
+    var email = document.getElementById("email");
         var emailError = document.getElementById("email-error");
     
-    password.addEventListener('input', function (e){
+    email.addEventListener('input', function (e){
     
-        var userpattern1 =/^[\w.+-]+@[\w.-]+.[a-zA-Z]{2,}$/;
-        var currentValue1 = e.target.value;
-        var vlera1 = userpattern1.test(currentValue1);
+        var userpattern2 = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        var currentValue2 = e.target.value;
+        var vlera2 = userpattern2.test(currentValue2);
     
     
-        if(vlera1){
+        if(vlera2){
             emailError.style.display = 'none';
         }else{
             emailError.style.display  = 'block';
         }
         })
+    
 
   </script>
 </body>

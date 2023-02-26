@@ -60,19 +60,12 @@
           <form action="" method="post">
             <h2>Register Here</h2>
             <input
-              type="text" placeholder="Enter Username" name="name" id="firstnamefield"  />
-            <p id="firstname-error">Please enter a valid first name!</p>
-            <input type="text" placeholder="Enter Lastname" id="lastnamefield" />
-            <p id="lastname-error">Please enter a valid last name!</p>
-            <input name="email" type="email" placeholder=" Enter Email" id="emailfield" />
-            <p id="email-error">Please enter a valid email!</p>
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter Password"
-              id="passwordfield"
-            />
+              type="text" placeholder="Enter Username" name="name" id="username"  />
+            <p id="firstname-error">Please enter a valid username name!</p>
+            <input type="password" name="password" placeholder="Enter Password" id="password"/>
             <p id="password-error">Please enter a valid password!</p>
+            <input name="email" type="email" placeholder=" Enter Email" id="email" />
+            <p id="email-error">Please enter a valid email!</p>
             <input name="submit" type="submit" class="btn-2" value="Register"/>
             <p>Already have an account?</p>
             <a href="./login.php" id="a-1">Log In</a>
@@ -115,71 +108,65 @@
         <p><b>Rating:</b> 3.4 (2,900 Reviews)</p>
       </div>
     </div>
+
+
     <script>
-      var username = document.getElementById("firstnamefield");
-      var usernameError = document.getElementById("firstname-error");
 
-      username.addEventListener("input", function (e) {
-        var userpattern = /^[A-Za-z][A-Za-z0-9_]{7,29}$/;
-        var currentValue = e.target.value;
-        var vlera = userpattern.test(currentValue);
-
-        if (vlera) {
-          usernameError.style.display = "none";
-        } else {
-          usernameError.style.display = "block";
-        }
-      });
-
-      //
-      //
+var username = document.getElementById("username");
+        var usernameError = document.getElementById("username-error");
     
-
-      var lastname = document.getElementById("lastnamefield");
-      var lastnameError = document.getElementById("lastname-error");
-
-      username.addEventListener("input", function (e) {
+    username.addEventListener('input', function (e){
+    
         var userpattern = /^[A-Za-z][A-Za-z0-9_]{7,29}$/;
         var currentValue = e.target.value;
         var vlera = userpattern.test(currentValue);
-
-        if (vlera) {
-          lastnameError.style.display = "none";
-        } else {
-          lastnameError.style.display = "block";
+    
+        if(vlera){
+            usernameError.style.display = 'none';
+        }else{
+            usernameError.style.display  = 'block';
         }
-      });
-
-      var password = document.getElementById("passwordfield");
-      var passwordError = document.getElementById("password-error");
-
-      password.addEventListener("input", function (e) {
+        })
+    
+    // 
+    // 
+    
+    
+        var password = document.getElementById("password");
+        var passwordError = document.getElementById("password-error");
+    
+    password.addEventListener('input', function (e){
+    
         var userpattern1 = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
         var currentValue1 = e.target.value;
         var vlera1 = userpattern1.test(currentValue1);
-
-        if (vlera1) {
-          passwordError.style.display = "none";
-        } else {
-          passwordError.style.display = "block";
+    
+    
+        if(vlera1){
+            passwordError.style.display = 'none';
+        }else{
+            passwordError.style.display  = 'block';
         }
-      });
+        })
 
-      //
-      var email = document.getElementById("emailfield");
-      var emailError = document.getElementById("email-error");
-
-      password.addEventListener("input", function (e) {
-        var userpattern1 = /^[\w.+-]+@[\w.-]+.[a-zA-Z]{2,}$/;
-        var currentValue1 = e.target.value;
-        var vlera1 = userpattern1.test(currentValue1);
-
-        if (vlera1) {
-          emailError.style.display = "none";
-        } else {
-          emailError.style.display = "block";
+        var email = document.getElementById("email");
+        var emailError = document.getElementById("email-error");
+    
+    email.addEventListener('input', function (e){
+    
+        var userpattern2 = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        var currentValue2 = e.target.value;
+        var vlera2 = userpattern2.test(currentValue2);
+    
+    
+        if(vlera2){
+            emailError.style.display = 'none';
+        }else{
+            emailError.style.display  = 'block';
         }
-      });
+        })
+    
+      
     </script>
   </body>
 </html>

@@ -37,6 +37,39 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
   }
 
 }
+function login(){
+    if(isset($_POST['Login'])){
+        $email = $_POST['Email'];
+        $password = $_POST['Password'];
+        if(empty($email) || empty($password)){
+            echo "You haven't filled out the form";
+            exit();
+        }
+
+        $query = "SELECT * FROM USERS WHERE Email = '" . $email . "'AND Password ='" . $password . "'";
+        $rez = mysqli_query($this -> conn, $query);
+        $info = mysqli_fetch_array($rez);
+
+        if(mysqli_num_rows($rez) > 0){
+            $_SESSION['Username'] = $info['Username'];
+
+            if(mysqli_num_rows($rez) > 0) {
+                $_SESSION['usertype'] = 'admin';
+                $usertype = $_SESSION['usertype'];
+                echo "<script>alert('Welcome to our galaxy, $usertype');</script>";
+                echo "<script>window.location.href = '/dashboard.php';</script>";              
+            }else{
+                $_SESSION['usertype'] = 'user';
+                echo "<script>alert('Incorrect username or password')</script>";
+                echo "<script>window.location.href = '/home.php';</script>";
+            }
+
+        }else {
+            echo "<script>alert('Incorrect username or password');</script>";
+
+        }
+    }
+}
 
 ?>
 
@@ -105,9 +138,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         <div class="formulari">
             <form action="thelogin.php" method="post">
             <h2>Login Here</h2>
-            <input type="text" name="username" placeholder="Enter Username" class="inputs" id="namefield">
+            <input type="text" name="username" placeholder="Enter Username" class="inputs" id="username">
             <p id="username-error">Please enter a valid Username!</p>
-            <input type="password" name="password"  placeholder="Enter Password" class="inputs" id="passwordfield">
+            <input type="password" name="password"  placeholder="Enter Password" class="inputs" id="password">
             <p id="password-error">Please enter a valid Password!</p>
             <button class="btn" ><a href="./home.php" id="loginbtn">Log In</a></button>
             <p class="link">Don't have an account?</p>
@@ -151,42 +184,42 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
       
   </div>
   <script>
-    var username = document.getElementById("namefield");
-        var usernameError = document.getElementById("username-error");
-    
-    username.addEventListener('input', function (e){
-    
-        var userpattern = /^[A-Za-z][A-Za-z0-9_]{7,29}$/;
-        var currentValue = e.target.value;
-        var vlera = userpattern.test(currentValue);
-    
-        if(vlera){
-            usernameError.style.display = 'none';
-        }else{
-            usernameError.style.display  = 'block';
-        }
-        })
-    
-    // 
-    // 
-    
-    
-        var password = document.getElementById("passwordfield");
-        var passwordError = document.getElementById("password-error");
-    
-    password.addEventListener('input', function (e){
-    
-        var userpattern1 = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-        var currentValue1 = e.target.value;
-        var vlera1 = userpattern1.test(currentValue1);
-    
-    
-        if(vlera1){
-            passwordError.style.display = 'none';
-        }else{
-            passwordError.style.display  = 'block';
-        }
-        })
+
+   var username = document.getElementById("username");
+var usernameError = document.getElementById("username-error");
+
+username.addEventListener('input', function (e){
+
+var userpattern = /^[A-Za-z][A-Za-z0-9_]{7,29}$/;
+var currentValue = e.target.value;
+var vlera = userpattern.test(currentValue);
+
+if(vlera){
+    usernameError.style.display = 'none';
+}else{
+    usernameError.style.display  = 'block';
+}
+})
+
+var password = document.getElementById("password");
+var passwordError = document.getElementById("password-error");
+
+password.addEventListener('input', function (e){
+
+var userpattern1 = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+var currentValue1 = e.target.value;
+var vlera1 = userpattern1.test(currentValue1);
+
+
+if(vlera1){
+    passwordError.style.display = 'none';
+}else{
+    passwordError.style.display  = 'block';
+}
+})
+
+
+
   </script>
 </body>
 </html>
